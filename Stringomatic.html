@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>StringoMatic Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+						<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">Erika Lu</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Programming</a></li>
+								<li><a href="arts.html">Art and Design</a></li>
+							</ul>
+						</nav>
+				</section>
+
+			<!-- Main -->
+		  <section id="main">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<header>
+								  <h2>String Art Algorithm and Machine </h2>
+								</header>
+								<a href="#" class="image project m"><img src="images/StringomaticIA.gif" alt="" /></a>
+								<section>
+									<header>
+									  <h3>Short Version:</h3>
+									</header>
+								  <p> I, along with a group of 4 others, created a machine that takes an image input and dispenses string across a circular board with pegs along its side. </p>
+								  <p>Technologies involved: Python, OpenCV image processing, Arduino</p>
+</section>
+								<section>
+									<header>
+									  <h3>Long Version:</h3>
+									</header>
+									<p> (If you want the <strong>really  long</strong> version, check out our <a href="http://poe.olin.edu/2018/adryft/">website</a>!) </p>
+									<p>The Stringomatic was a capstone project that we created for an open-ended class called Principles of Engineering. </p>
+								  <p>For this project, I created a greedy algorithm that converted images into a series of polar coordinates, that would allow the machine to transpose the image into string. </p>
+								  <p>The image processing algorithm takes an image as an input and returns a path for the string to follow in the form of a list of pegs. The pegs are identified by index n, n = 0 1 2 … (number of pegs on the board). </p>
+							    <img class= "image project m" src="images/stringomatic2.jpg" alt=""/>
+							    <p>Our image processing is a calculated with a greedy algorithm, which means that every line drawn by the string is the most optimal at that given time. It does not take into consideration what the end picture will look like. For each step, the algorithm draws the line across the board that covers the most "dark" values in the picture. </p>
+							    <img src="images/stringomatic3.gif" alt="" class="image project m"/>								</section>
+								<p>Notice how the pathing algorithm works on an inverted grayscale picture. This is done so that the pathing always looks for the line that covers the highest sum of grayscale values, as lighter colors correspond to higher numbers.</p>
+								<p>After each step, the image compares the current string drawn picture to the original picture and calculates the error by finding the squared-error sum per each pixel value.</p>
+								<p>The algorithm stops pathing the string once the error is at a minimum. We see below that the algorithm creates the best result at 1400 ft of string. </p>
+								<img class ="image project m" src="images/stringomatic4.png" alt=""/>								<br>
+							</article>
+
+			  </div>
+				</section>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<section id="footer" class="container">
+						<div class="row">
+
+
+						<div class="4u 12u(mobile)">
+							<section>
+								<header>
+									<h2>Background</h2>
+								</header>
+								<a class="image bg"><img src="images/BackgroundPic.JPG" alt="" /></a>
+								<br>
+								<p> I was born and raised in Northborough, Massachussets and am studying Computer Science at Franklin W. Olin College of Engineering. Now, I'm figuring out what will happen after that. </p>
+							</section>
+						</div>
+
+						<div class="4u 12u(mobile)">
+								<section>
+									<header>
+										<h2>Contact</h2>
+									</header>
+									<ul class="contact">
+										<li>
+											<h3>Linked-In</h3>
+											<p><a href="#">https://www.linkedin.com/in/erika-lu-b51173174/</a></p>
+										</li>
+										<li>
+											<h3>Mail</h3>
+											<p><a href="#">lu.erika58@gmail.com</a></p>
+										</li>
+										<!-- <li>
+											<h3>Phone</h3>
+											<p>(800) 000-0000</p>
+										</li> -->
+									</ul>
+								</section>
+						  </div>
+						</div>
+						<div class="row">
+							<div class="12u">
+
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; Erika Lu. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</section>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
